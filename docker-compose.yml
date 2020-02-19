@@ -2,6 +2,10 @@ version: '3'
 services:
   db:
     image: postgres
+    environment:
+         POSTGRES_DB: pipelines
+         POSTGRES_USER: test_user
+         POSTGRES_PASSWORD: test_user_password
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
   web:
