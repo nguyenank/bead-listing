@@ -14,3 +14,49 @@
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
  @import "bootstrap";
+
+$off-white: #f1f3f4;
+$light-blue: #79bac1;
+$blue: #2a7886;
+$purple: #512b58;
+
+/* HEADER */
+.header {
+  background-color: $purple;
+  margin-bottom: 1em;
+  font-size: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  a:link {color: $light-blue;}
+
+  a:visited {color: $light-blue;}
+
+  a:hover {color: $off-white;
+            text-decoration: none; }
+
+  .title {
+    font-family: Georgia, serif;
+
+    font-size: 3em;
+    font-variant: small-caps;
+    }
+
+  .menu {
+    font-size: 2em;
+  }
+}
+
+.dropdown-menu {
+  a:hover {color: $purple;
+            text-decoration: none;
+          }
+  a:active {background-color: #ffffff;}
+}
+
+/* GENERAL */
+body {
+  background-color: $off-white;
+  font-size: 100%;
+}

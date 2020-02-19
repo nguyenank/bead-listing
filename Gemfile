@@ -13,6 +13,10 @@ gem 'puma', '~> 3.11'
 gem 'sassc', '~> 2'
 # Use Bootstrap formatting
 gem 'bootstrap', '~> 4.4.1'
+# Need jquery for Bootstrap
+gem 'jquery-rails'
+# Need Popper.js for Bootstrap
+gem 'popper_js', '~> 1.16'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
