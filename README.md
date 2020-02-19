@@ -1,24 +1,31 @@
-# README
+# Summary
+This will be a website allowing users to keep track of beads they own, as well as specifications of those beads and an easy way to sort through them.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Deployment
+Deployment requires Docker and Docker Compose, which can be found [here](https://www.docker.com/products/docker-desktop). Docker Compose comes with Docker Desktop.
 
-Things you may want to cover:
+To deploy the project:
 
-* Ruby version
+```
+docker-compose up -d
+```
 
-* System dependencies
+The `-d` flag signals the container to run in the background, so commands can still be run on the terminal.
 
-* Configuration
+The website will be hosted at [http://localhost:3900](http://localhost:3900).
 
-* Database creation
+To stop the container:
+```
+docker-compose down
+```
 
-* Database initialization
+If you wish to run commands within the container, like Rails commands:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+docker exec -it <container name> /bin/bash
+```
+This starts a bash terminal within the container. The bash terminal can be exited back to the host terminal with the command `exit`. To find the container name:
+```
+docker ps
+```
+This will list all running containers. The container name will likely be `bead-listing_web_1`.
