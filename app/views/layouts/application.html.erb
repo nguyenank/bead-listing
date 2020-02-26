@@ -11,7 +11,10 @@
 
   <body class="d-flex-column">
     <%= render 'layouts/header' %>
+    <div class="content">
       <%= yield %>
+      </div>
     <%= render 'layouts/footer' %>
+    <%= debug(params) %>
   </body>
 </html>

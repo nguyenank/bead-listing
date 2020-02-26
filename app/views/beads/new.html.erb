@@ -1,0 +1,29 @@
+
+<% if action_name == "new" %>
+  <% provide(:nedit, "Add Beads") %>
+<% else %>
+  <%= provide(:nedit, "Edit Beads") %>
+<% end %>
+
+<% provide(:title, :nedit) %>
+
+<h1><%= yield :nedit %> </h1>
+  <div class="d-flex align-content-center new-bead">
+    <%= form_for @bead do |f| %>
+
+    <%= f.label :brand %>
+    <%= f.text_field :brand, class: 'form-control' %>
+
+    <%= f.label :color %>
+    <%= f.text_field :color, class: 'form-control' %>
+
+    <%= f.label :size %>
+    <%= f.text_field :size, class: 'form-control' %>
+
+    <%= f.label :shape %>
+    <%= f.text_field :shape, class: 'form-control' %>
+
+
+    <%= f.submit "Done", class: "btn-primary form-control" %>
+    <% end %>
+</div>
