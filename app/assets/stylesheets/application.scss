@@ -49,6 +49,9 @@ $purple: #512b58;
 }
 
 .dropdown-menu {
+  a {
+    text-align: center;
+  }
   a:hover {color: $purple;
             text-decoration: none;
           }
@@ -59,4 +62,28 @@ $purple: #512b58;
 body {
   background-color: $off-white;
   font-size: 100%;
+  height: 100%;
+}
+
+p {
+  margin: 0em 1em;
+}
+
+h1 {
+  margin: 0em 0.5em;
+  font-size: 2em;
+  font-weight: bold;
+  color: $blue;
+}
+
+/* FOOTER */
+
+.footer {
+  border-top: 0.1em solid #bbb;
+
+  .footer-text {
+    color: $purple;
+    font-size:0.5em;
+      margin: 0em 0.5em;
+  }
 }
