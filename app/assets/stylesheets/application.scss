@@ -100,20 +100,36 @@ body {
 /* BEADS */
 
 .bead {
-  p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+
+  /* IN GENERAL */
 
   .bead-link {
-    text-align: right;
     color: $light-blue;
     font-size: 0.9em;
+    display: inline-block;
+  }
+
+  .bead-links {
+    text-align: right;
+    .link-divider {
+      color: $blue;
+    }
   }
 
   a.bead-link:hover {
     color: $blue;
+  }
+
+  a:hover {
+      text-decoration: none;
+      font-weight: 500;
+  }
+
+  /* FOR TILE DISPLAY */
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   span {
@@ -130,9 +146,11 @@ body {
     display: block;
   }
 
-  a:hover {
-      text-decoration: none;
-      font-weight: 500;
+  /*FOR DETAIL DESCRIPTION DISPLAY*/
+
+  p.description {
+    overflow:auto;
+    white-space: normal;
   }
 }
 

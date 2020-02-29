@@ -1,4 +1,6 @@
 class BeadsController < ApplicationController
+  helper BeadsDisplayHelper
+  
   def new
     @bead = Bead.new
   end
@@ -41,7 +43,7 @@ class BeadsController < ApplicationController
   private
 
     def bead_params
-      params.require(:bead).permit(:brand,:color,:size,:shape)
+      params.require(:bead).permit(:brand,:color,:size,:shape,:description)
     end
 
 end
