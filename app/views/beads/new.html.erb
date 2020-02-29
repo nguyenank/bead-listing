@@ -1,6 +1,6 @@
 
 <%# configure correct title based on whether this is an add/edit %>
-<% if action_name == "new" %>
+<% if action_name == "new" || action_name == "create" %>
   <% @newedit = "Add Beads" %>
   <% provide(:newedit, "Add Beads") %>
 <% else %>
@@ -36,6 +36,6 @@
     <input class='form-control' type="text" list="shape"
     name='bead[shape]' id = "bead_shape" value='<%=@bead.shape%>'>
 
-    <%= f.submit @newedit, class: "btn-primary form-control" %>
+    <%= f.submit @newedit, class: "button form-control" %>
     <% end %>
 </div>

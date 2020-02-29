@@ -1,6 +1,2 @@
-<% provide(:title, @bead.brand) %>
-<p>Find me in app/views/beads/show.html.erb</p>
-<%= @bead.brand %>
-<%= @bead.color %>
-<%= @bead.size %>
-<%= @bead.shape %>
+<% provide(:title, @bead.brand + " "+@bead.color+" "+@bead.size+" "+@bead.shape) %>
+<%=each_bead(@bead)%>

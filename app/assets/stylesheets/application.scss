@@ -75,6 +75,11 @@ body {
   }
 }
 
+.button {
+  background-color: $purple;
+  color:$off-white;
+}
+
 /* NEW BEAD */
 .form-control {
   margin: 0.5em;
@@ -89,5 +94,70 @@ body {
 
   .footer-text {
     font-size:0.7em;
+  }
+}
+
+/* BEADS */
+
+.bead {
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .bead-link {
+    text-align: right;
+    color: $light-blue;
+    font-size: 0.9em;
+  }
+
+  a.bead-link:hover {
+    color: $blue;
+  }
+
+  span {
+    color: $purple;
+    font-weight: 600;
+  }
+
+  .underline {
+    text-decoration: underline;
+  }
+
+  a {
+    color: black;
+    display: block;
+  }
+
+  a:hover {
+      text-decoration: none;
+      font-weight: 500;
+  }
+}
+
+/* BEAD INDEX */
+.bead-list {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+  margin: 2em;
+
+  .bead-placeholder {
+    padding: 1em;
+    margin: 0.5em;
+    flex: 1 0 23%;
+  }
+
+  .bead {
+    background-color: white;
+    padding: 1em;
+    margin: 0.5em;
+    line-height: 1.2em;
+    flex: 1 0 23%;
+    min-width: 0;
+
+
   }
 }
