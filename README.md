@@ -12,10 +12,11 @@ docker-compose up -d
 
 The `-d` flag signals the container to run in the background, so commands can still be run on the terminal.
 
-Also, the _first_ time the project is deployed, a database must be created:
+Also, the _first_ time the project is deployed, a database must be created and set-up (migrated):
 
 ```
 docker-compose run web rake db:create
+docker-compose run web rake db:migrate
 ```
 
 The website will be hosted at [http://localhost:3900](http://localhost:3900).
@@ -25,7 +26,7 @@ To stop the container:
 docker-compose down
 ```
 
-If you wish to run commands within the container (like Rails commands):
+If you wish to run commands within the container (like `rails console` and other Rails commands):
 
 ```
 docker exec -it <container name> /bin/bash

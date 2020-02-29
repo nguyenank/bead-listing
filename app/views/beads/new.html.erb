@@ -1,29 +1,41 @@
 
+<%# configure correct title based on whether this is an add/edit %>
 <% if action_name == "new" %>
-  <% provide(:nedit, "Add Beads") %>
+  <% @newedit = "Add Beads" %>
+  <% provide(:newedit, "Add Beads") %>
 <% else %>
-  <%= provide(:nedit, "Edit Beads") %>
+  <% @newedit = "Edit Beads" %>
+  <% provide(:newedit, "Edit Beads") %>
 <% end %>
 
-<% provide(:title, :nedit) %>
+<% provide(:title, @newedit ) %>
 
-<h1><%= yield :nedit %> </h1>
+<%# generate  dropdown lists %>
+<%= dropdown_generate(:brand) %>
+<%= dropdown_generate(:color) %>
+<%= dropdown_generate(:shape) %>
+<%= dropdown_generate(:size) %>
+
+<h1><%= yield :newedit %> </h1>
   <div class="d-flex align-content-center new-bead">
     <%= form_for @bead do |f| %>
 
     <%= f.label :brand %>
-    <%= f.text_field :brand, class: 'form-control' %>
+    <input class='form-control' type="text" list="brand"
+    name='bead[brand]' id = "bead_brand" value='<%=@bead.brand%>'>
 
     <%= f.label :color %>
-    <%= f.text_field :color, class: 'form-control' %>
+    <input class='form-control' type="text" list="color"
+    name='bead[color]' id = "bead_color" value='<%=@bead.color%>'>
 
     <%= f.label :size %>
-    <%= f.text_field :size, class: 'form-control' %>
+    <input class='form-control' type="text" list="size"
+    name='bead[size]' id = "bead_size" value='<%=@bead.size%>'>
 
     <%= f.label :shape %>
-    <%= f.text_field :shape, class: 'form-control' %>
+    <input class='form-control' type="text" list="shape"
+    name='bead[shape]' id = "bead_shape" value='<%=@bead.shape%>'>
 
-
-    <%= f.submit "Done", class: "btn-primary form-control" %>
+    <%= f.submit @newedit, class: "btn-primary form-control" %>
     <% end %>
 </div>
