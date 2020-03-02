@@ -1,0 +1,13 @@
+<%# Ruby on Rails Tutorial, error message%>
+<% if @bead.errors.any? %>
+    <div class="error-explanation">
+      <div class="error-header">
+        This form contains <%= pluralize(@bead.errors.count, "error") %>.
+      </div>
+      <ul>
+      <% @bead.errors.full_messages.each do |msg| %>
+        <li><%= msg +"." %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

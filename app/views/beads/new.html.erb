@@ -19,24 +19,25 @@
 <h1><%= yield :newedit %> </h1>
   <div class="d-flex align-content-center new-bead">
     <%= form_for @bead do |f| %>
+    <%= render 'shared/error_messages' %>
 
-    <%= f.label :brand %>
+    <%= f.label :brand, class: "form-label" %>
     <input class='form-control' type="text" list="brand"
     name='bead[brand]' id = "bead_brand" value='<%=@bead.brand%>'>
 
-    <%= f.label :color %>
+    <%= f.label :color, class: "form-label"  %>
     <input class='form-control' type="text" list="color"
     name='bead[color]' id = "bead_color" value='<%=@bead.color%>'>
 
-    <%= f.label :size %>
+    <%= f.label :size, class: "form-label"  %>
     <input class='form-control' type="text" list="size"
     name='bead[size]' id = "bead_size" value='<%=@bead.size%>'>
 
-    <%= f.label :shape %>
+    <%= f.label :shape, class: "form-label"  %>
     <input class='form-control' type="text" list="shape"
     name='bead[shape]' id = "bead_shape" value='<%=@bead.shape%>'>
 
-    <%= f.label :description %>
+    <%= f.label :description, class: "form-label"  %>
     <%= f.text_area :description, size:"60x8", class:"form-control" %>
     <%= f.submit @newedit, class: "button form-control" %>
     <% end %>

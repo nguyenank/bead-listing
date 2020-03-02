@@ -179,3 +179,29 @@ body {
 
   }
 }
+
+/* FORM */
+.form-label {
+  color: $purple;
+  font-weight: bold;
+  margin-left: 0.5em;
+}
+
+/* FORM ERROR MESSAGE */
+.error-explanation {
+  background-color: #fff;
+  border-radius: 1.2em;
+  border: 2px solid $purple;
+  font-size: 100%;
+  margin-bottom: 1em;
+
+  .error-header {
+    background-color: $purple;
+    border-radius: 1em 1em 0 0;
+    text-align: center;
+    color: $light-blue;
+    font-weight: 500;
+    padding: 0.25em 0;
+    margin-bottom: 0.5em;
+  }
+}
