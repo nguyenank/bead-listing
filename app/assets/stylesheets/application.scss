@@ -175,9 +175,16 @@ body {
     line-height: 1.2em;
     flex: 1 0 23%;
     min-width: 0;
-
-
   }
+}
+
+.bead-photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 80%;
+  margin-bottom: 1em;
 }
 
 /* FORM */

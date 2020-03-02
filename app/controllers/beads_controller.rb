@@ -25,6 +25,7 @@ class BeadsController < ApplicationController
 
   def update
     @bead = Bead.find(params[:id])
+    #@bead.photo.attach(params[:photo])
     @bead.update(bead_params)
     if @bead.save
       redirect_to bead_url(@bead)
@@ -45,7 +46,7 @@ class BeadsController < ApplicationController
   private
 
     def bead_params
-      params.require(:bead).permit(:brand,:color,:size,:shape,:description)
+      params.require(:bead).permit(:brand,:color,:size,:shape,:description,:photo)
     end
 
 end

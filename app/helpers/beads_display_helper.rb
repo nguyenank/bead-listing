@@ -3,6 +3,9 @@ module BeadsDisplayHelper
 # generate display information about one bead
 def one_bead(bead,descriptionInclude: false)
   content_tag :div, class: "bead", id:bead.id do
+    if(bead.photo.attached?)
+      concat(image_tag(bead.photo, class: "bead-photo"))
+    end
     concat(content_tag(:p,
           (content_tag(:span, "Brand", class: "underline"))\
           +(content_tag(:span, ": "))+ bead.brand))

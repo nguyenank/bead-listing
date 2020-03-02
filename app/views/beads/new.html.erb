@@ -21,6 +21,9 @@
     <%= form_for @bead do |f| %>
     <%= render 'shared/error_messages' %>
 
+    <%= f.label :photo, class: "form-label" %>
+    <%= f.file_field :photo, class: "form-control"%>
+
     <%= f.label :brand, class: "form-label" %>
     <input class='form-control' type="text" list="brand"
     name='bead[brand]' id = "bead_brand" value='<%=@bead.brand%>'>
