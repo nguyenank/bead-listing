@@ -6,6 +6,7 @@ def bead_list()
     Bead.order(updated_at: :desc).collect do |bead|
         concat(bead_tile(bead))
     end
+    # https://medium.com/developedbyjohn/equal-width-flex-items-a5ba1bfacb77
     3.times do
       concat(content_tag :div, "", class: "bead-placeholder")
     end
