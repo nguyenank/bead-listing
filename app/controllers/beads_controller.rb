@@ -1,6 +1,6 @@
 class BeadsController < ApplicationController
   helper BeadsDisplayHelper
-  
+
   def new
     @bead = Bead.new
   end
@@ -34,6 +34,8 @@ class BeadsController < ApplicationController
   end
 
   def destroy
+    Bead.destroy(params[:id])
+    redirect_to '/'
   end
 
   def index

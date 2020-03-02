@@ -30,8 +30,8 @@ def bead_link(bead)
     concat(link_to("Edit Bead", edit_bead_path(bead.id), \
            class: "bead-link" ))
     concat(content_tag(:span, " | ", class: "link-divider"))
-    concat(link_to("Delete Bead", "#", \
-           class: "bead-link" ))
+    concat(link_to("Delete Bead", bead_path(bead), method: :delete, \
+           class: "bead-link", data: {confirm: "Are you sure you want to delete this bead?"} ))
   end
 end
 
