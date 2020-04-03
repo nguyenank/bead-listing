@@ -100,8 +100,15 @@ body {
 /* BEADS */
 
 .bead {
-
+  position: relative;
   /* IN GENERAL */
+
+  #add-bead {
+    color: $light-blue;
+    font-size: 2em;
+    line-height: 2em;
+    text-align:center;
+  }
 
   .bead-link {
     color: $light-blue;
@@ -110,7 +117,9 @@ body {
   }
 
   .bead-links {
-    text-align: right;
+    position: absolute;
+    right: 0.5em;
+    bottom: 0.5em;
     .link-divider {
       color: $blue;
     }
@@ -184,6 +193,19 @@ body {
   margin-right: auto;
   width: 80%;
   height: 80%;
+  max-width: 500px;
+  max-height: 500px;
+  margin-bottom: 1em;
+}
+
+.bead-photo-placeholder {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  height: 40%;
+  max-width: 500px;
+  max-height: 500px;
   margin-bottom: 1em;
 }
 

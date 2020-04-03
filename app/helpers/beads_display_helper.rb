@@ -5,6 +5,8 @@ def one_bead(bead,descriptionInclude: false)
   content_tag :div, class: "bead", id:bead.id do
     if(bead.photo.attached?)
       concat(image_tag(bead.photo, class: "bead-photo"))
+    elsif (!descriptionInclude)
+      concat(image_tag("default.png", class: "bead-photo-placeholder"))
     end
     concat(content_tag(:p,
           (content_tag(:span, "Brand", class: "underline"))\
@@ -25,6 +27,13 @@ def one_bead(bead,descriptionInclude: false)
     end
     concat(bead_link(bead))
   end
+end
+
+def add_bead_card()
+    content_tag :div, class: "bead" do
+        concat(link_to("Add\n New\n Bead", new_bead_path, \
+                 id: "add-bead" ))
+    end
 end
 
 #generate edit/delete link for beads
