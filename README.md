@@ -36,3 +36,14 @@ This starts a bash terminal within the container. The bash terminal can be exite
 docker ps
 ```
 This will list all running containers. The container name will likely be `bead-listing_web_1`.
+
+# Development
+If changes are made to the Gemfile or the Compose file, the application must be rebuilt:
+```
+docker-compose up --build
+```
+If a full rebuild is necessary, then:
+```
+docker-compose run web bundle install
+```
+followed by the previous command.
