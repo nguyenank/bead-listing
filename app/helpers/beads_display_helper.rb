@@ -13,7 +13,7 @@ def one_bead(bead,descriptionInclude: false)
           +(content_tag(:span, ": "))+ bead.brand))
     concat(content_tag(:p,
           (content_tag(:span, "Color", class: "underline"))\
-          +(content_tag(:span, ": "))+ bead.color))
+          +(content_tag(:span, ": "))+ bead.color_list))
     concat(content_tag(:p,
           (content_tag(:span, "Size", class: "underline"))\
           +(content_tag(:span, ": "))+ bead.size))
