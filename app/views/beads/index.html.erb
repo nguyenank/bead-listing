@@ -1,2 +1,7 @@
-
-<%= bead_list() %>
+<%#Creating a simple search
+# https://medium.com/le-wagon/build-a-simple-search-with-the-simple-form-gem-in-rails-5-b247168282d1 %>
+<%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+  <%= f.input :color, input_html: {value: ""} %>
+  <%= f.submit "Search", class: "button btn" %>
+<% end %>
+<%= bead_list(@beads) %>

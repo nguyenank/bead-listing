@@ -41,6 +41,11 @@ class BeadsController < ApplicationController
 
   def index
       @beads = Bead.all
+      @search = params[:search]
+      if @search.present?
+        @color = @search[:color]
+        @beads = Bead.where("color ILIKE ?", "%#{@color}")
+      end
   end
 
   private
