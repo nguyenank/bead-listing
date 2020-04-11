@@ -9,5 +9,13 @@ class Bead < ApplicationRecord
   validates :shape, presence: true, length: {maximum: 32}
   validates :description, length: {maximum: 100000}
 
-  $colors = ["red", "teal", "rose-gold"]
+  include PgSearch::Model
+
+  pg_search_scope :global_search,
+    associated_against: {
+      colors: [:name]
+    },
+    using: {
+      tsearch: {any_word: true}
+    }
 end

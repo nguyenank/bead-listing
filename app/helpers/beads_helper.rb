@@ -1,19 +1,5 @@
 module BeadsHelper
 
-#generates viewpage tile display
-def bead_list(beads)
-  content_tag :div, class: "bead-list" do
-    beads.order(updated_at: :desc).collect do |bead|
-        concat(bead_tile(bead))
-    end
-    # https://medium.com/developedbyjohn/equal-width-flex-items-a5ba1bfacb77
-    concat(add_bead_card)
-    3.times do
-      concat(content_tag :div, "", class: "bead-placeholder")
-    end
-  end
-end
-
 # generates automatic dropdown options for new/edit page
 # https://stackoverflow.com/a/50450751
 # https://stackoverflow.com/a/4674091

@@ -29,13 +29,6 @@ def one_bead(bead,descriptionInclude: false)
   end
 end
 
-def add_bead_card()
-    content_tag :div, class: "bead" do
-        concat(link_to("Add\n New\n Bead", new_bead_path, \
-                 id: "add-bead" ))
-    end
-end
-
 #generate edit/delete link for beads
 def bead_link(bead)
   content_tag :div, class: "bead-links" do

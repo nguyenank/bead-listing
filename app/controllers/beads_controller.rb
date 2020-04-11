@@ -42,7 +42,7 @@ class BeadsController < ApplicationController
   def index
       if params[:search]
         @filter = params["search"]["colors"].reject(&:blank?)
-        @beads = @filter.empty? ? Bead.all : Bead.all.tagged_with(@filter, any: true)
+        @beads = Bead.all.global_search("#{@filter}")
       else
         @beads = Bead.all
       end
