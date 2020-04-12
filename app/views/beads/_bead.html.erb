@@ -1,3 +1,26 @@
-<% beads.each do |bead| %>
-    <%= bead_tile(bead) %>
-<% end %>
+<%# render individual bead display %>
+
+<div class = "bead" id = bead.id>
+  <%= link_to bead_path(bead.id) do %>
+      <% if(bead.photo.attached?) %>
+        <%= image_tag(bead.photo, class:"bead-photo") %>
+      <% elsif (!description) %>
+        <%= image_tag("default.png", class:"bead-photo-placeholder") %>
+      <% end %>
+      <p> <span class = "underline">Brand:</span><span> </span>
+          <%= bead.brand %> </p>
+      <p> <span class = "underline">Color:</span><span> </span>
+          <%= bead.color_list %> </p>
+      <p> <span class = "underline">Size:</span><span> </span>
+          <%= bead.size %> </p>
+      <p> <span class = "underline">Shape:</span><span> </span>
+          <%= bead.shape %> </p>
+  <% end %>
+  <div class = "bead-links">
+    <%= link_to("Edit Bead", edit_bead_path(bead.id), \
+           class: "bead-link" ) %>
+   <span class = "link-divider"> | </span>
+   <%= link_to("Delete Bead", bead_path(bead), method: :delete, \
+          class: "bead-link", data: {confirm: "Are you sure you want to delete this bead?"} ) %>
+  </div>
+</div>

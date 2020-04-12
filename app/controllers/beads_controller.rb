@@ -1,5 +1,4 @@
 class BeadsController < ApplicationController
-  helper BeadsDisplayHelper
 
   def new
     @bead = Bead.new

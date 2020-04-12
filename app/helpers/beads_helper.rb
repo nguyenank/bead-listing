@@ -21,14 +21,4 @@ def dropdown_color_generate()
   end
 end
 
-private
-
-  #generates individual tile for view page
-  def bead_tile(bead)
-    link_to bead_path(bead.id) do
-      concat(one_bead(bead))
-    end
-  end
-
-
 end
