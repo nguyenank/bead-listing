@@ -23,7 +23,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 
 gem 'simple_form'
-
+gem 'pg_search'
 gem 'acts-as-taggable-on', '~> 6.0'
 
 # Use CoffeeScript for .coffee assets and views

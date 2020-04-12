@@ -12,7 +12,7 @@
 
 <%# generate  dropdown lists %>
 <%= dropdown_generate(:brand) %>
-<%= dropdown_generate(:color) %>
+<%= dropdown_color_generate %>
 <%= dropdown_generate(:shape) %>
 <%= dropdown_generate(:size) %>
 
@@ -28,7 +28,7 @@
     <input class='form-control' type="text" list="brand"
     name='bead[brand]' id = "bead_brand" value='<%=@bead.brand%>'>
 
-    <%= f.label :color, class: "form-label"  %>
+    <%= f.label "Color (separate values with commas)", class: "form-label"  %>
     <input class='form-control' type="text" list="color"
     name='bead[color_list]' id = "bead_color" value='<%=@bead.color_list%>'>
 

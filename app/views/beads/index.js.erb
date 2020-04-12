@@ -1,8 +1,7 @@
+// https://medium.com/swlh/advanced-filtering-for-your-rails-5-application-28c8da2d29b6
 function replaceBeads (innerHTML) {
   const beads = document.getElementsByClassName('bead-list')[0];
   let temp = innerHTML;
-  /* temp += "<div class = 'bead'><%= link_to('Add\n New\n Bead', new_bead_path, id: 'add-bead' ) %></div>";
-`*/
   temp += "<div class = 'bead-placeholder'></div>";
   temp += "<div class = 'bead-placeholder'></div>";
   temp += "<div class = 'bead-placeholder'></div>";
@@ -10,8 +9,8 @@ function replaceBeads (innerHTML) {
 }
 
 if ('<%= @filter %>' === "[]") {
-replaceBeads("<%= j render 'bead', beads: Bead.all %>");
+replaceBeads("<%= j render 'bead', beads: Bead.all %><div class = 'bead'><%=j link_to('Add New Bead', new_bead_path, id: 'add-bead' ) %></div>");
 }
 else {
-replaceBeads("<%= j render 'bead', beads: @beads %>");
+replaceBeads("<%= j render 'bead', beads: @beads %><div class = 'bead'><%=j link_to('Add New Bead', new_bead_path, id: 'add-bead' ) %></div>");
 }

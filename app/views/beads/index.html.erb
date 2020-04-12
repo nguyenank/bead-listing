@@ -1,5 +1,5 @@
-<%#Creating a simple search
-# https://medium.com/le-wagon/build-a-simple-search-with-the-simple-form-gem-in-rails-5-b247168282d1 %>
+<%#Creating advanced filtering
+# https://medium.com/swlh/advanced-filtering-for-your-rails-5-application-28c8da2d29b6 %>
 
 <% @colors = Bead.color_counts.pluck(:name).uniq.sort_by!{|e| e.downcase}%>
 <%= simple_form_for :search, required: false, url: root_path, method: "GET", remote: true do |f| %>
