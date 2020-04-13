@@ -3,6 +3,7 @@ class Bead < ApplicationRecord
   include PgSearch::Model
 
   pg_search_scope :global_search,
+    against: [:brand, :size, :shape],
     associated_against: {
       colors: [:name]
     },

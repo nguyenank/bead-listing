@@ -2,9 +2,23 @@
 # https://medium.com/swlh/advanced-filtering-for-your-rails-5-application-28c8da2d29b6 %>
 
 <% @colors = Bead.color_counts.pluck(:name).uniq.sort_by!{|e| e.downcase}%>
+<% @brands = Bead.pluck(:brand).uniq.sort_by!{|e| e.downcase}%>
+<% @sizes = Bead.pluck(:size).uniq.sort_by!{|e| e.downcase}%>
+<% @shapes = Bead.pluck(:shape).uniq.sort_by!{|e| e.downcase}%>
 <%= simple_form_for :search, required: false, url: root_path, method: "GET", remote: true do |f| %>
+
   <div class="form-label" >Colors</div>
   <%= f.input :colors, label: false,  collection: @colors, as: :check_boxes %>
+
+  <div class="form-label" >Brand</div>
+  <%= f.input :brands, label: false,  collection: @brands, as: :check_boxes %>
+
+  <div class="form-label" >Size</div>
+  <%= f.input :sizes, label: false,  collection: @sizes, as: :check_boxes %>
+  
+  <div class="form-label" >Shape</div>
+  <%= f.input :shapes, label: false,  collection: @shapes, as: :check_boxes %>
+
   <%= link_to "Reset", root_path, class: "btn button" %>
 <% end %>
 
