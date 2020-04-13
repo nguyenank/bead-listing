@@ -9,8 +9,8 @@ function replaceBeads (innerHTML) {
 }
 
 if ('<%= @filter %>' === "[]") {
-replaceBeads("<%= j render 'bead', beads: Bead.all %><div class = 'bead'><%=j link_to('Add New Bead', new_bead_path, id: 'add-bead' ) %></div>");
+replaceBeads("<%= j render 'beads', beads: Bead.all %><div class = 'bead'><%=j link_to('Add New Bead', new_bead_path, id: 'add-bead' ) %></div>");
 }
 else {
-replaceBeads("<%= j render 'bead', beads: @beads %><div class = 'bead'><%=j link_to('Add New Bead', new_bead_path, id: 'add-bead' ) %></div>");
+replaceBeads("<%= j render 'beads', beads: @beads %><div class = 'bead'><%=j link_to('Add New Bead', new_bead_path, id: 'add-bead' ) %></div>");
 }

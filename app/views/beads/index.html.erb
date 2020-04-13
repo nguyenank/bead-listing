@@ -11,13 +11,14 @@
 <div class = "bead-list">
   <%= render 'beads', beads: @beads %>
   <div class = "bead">
-    <%= link_to("Add\n New\n Bead", new_bead_path, \
+    <%= link_to("Add\n New\n Bead", new_bead_path,
              id: "add-bead" ) %>
   </div>
   <div class = "bead-placeholder"></div>
   <div class = "bead-placeholder"></div>
   <div class = "bead-placeholder"></div>
 </div>
+
 
 <script type="text/javascript">
   var checkBoxes = document.getElementsByClassName("checkbox");
