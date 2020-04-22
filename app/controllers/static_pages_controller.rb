@@ -5,4 +5,11 @@ class StaticPagesController < ApplicationController
   def contact
   end
 
+  def searchexplain
+    respond_to do |format|
+     format.html
+     format.js
+   end
+  end
+
 end

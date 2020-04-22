@@ -98,6 +98,26 @@ body {
   }
 }
 
+/************** MODALS ***********************/
+.modal-header {
+  .close {
+    font-size: 2em;
+    font-weight: bold;
+    color: $purple;
+  }
+}
+.modal-body {
+  .logic {
+    color: $blue;
+    font-variant-caps: all-petite-caps;
+  }
+
+  .option {
+    color: $purple;
+    font-weight: 500;
+  }
+}
+
 /************* NEW/EDIT BEAD PAGE ***********/
 
 .form-control {
@@ -216,7 +236,6 @@ body {
 .form-label {
   color: $light-blue;
   font-weight: bold;
-  margin-left: 0.5em;
 }
 
 /* FORM ERROR MESSAGE */
@@ -246,6 +265,12 @@ body {
   vertical-align: super;
   color: $gray;
 }
+
+a#search-explain:hover {
+  text-decoration: none;
+  color: $off-white;
+}
+
 .checkbox {
   display:block;
 }

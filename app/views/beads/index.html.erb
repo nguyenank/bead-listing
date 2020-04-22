@@ -3,7 +3,10 @@
 <div class = "index">
 
   <div class = "bead-search">
-  <h1>Search <div id = "search-explain">?</div></h1>
+  <h1>Search
+    <%= link_to '?', "/how-search-works", {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', id: 'search-explain'} %>
+  </h1>
+
   <% @colors = Bead.color_counts.pluck(:name).uniq.sort_by!{|e| e.downcase}%>
   <% @brands = Bead.pluck(:brand).uniq.sort_by!{|e| e.downcase}%>
   <% @sizes = Bead.pluck(:size).uniq.sort_by!{|e| e.downcase}%>
@@ -27,6 +30,14 @@
   </div>
 
   <div class = "bead-list">
+    
+    <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content"></div>
+      </div>
+    </div>
+
+
     <%= render 'beads', beads: @beads %>
     <div class = "bead">
       <a id = "add-bead" href="/beads/new">
