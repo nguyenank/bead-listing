@@ -1,5 +1,7 @@
 # Summary
-This is a website that allows users to keep track of beads they own. You can specify the brand, color, shape, size and add a description, as well as sort through them.
+This is a website that allows users to keep track of beads they own. The brand, color, shape, size can be specified, and beads can be sorted based on these parameters. A description and image can also be attached to each bead.
+
+This application was initially created during CS189: Programming Practicum (Spring 2020) at Harvey Mudd College.
 
 # Deployment
 Deployment requires Docker and Docker Compose, which can be found [here](https://www.docker.com/products/docker-desktop). Docker Compose comes with Docker Desktop.

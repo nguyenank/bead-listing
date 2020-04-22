@@ -40,11 +40,29 @@ class BeadsController < ApplicationController
 
   def index
       if params[:search]
-        @filter = params["search"]["colors"].concat(
-          params["search"]["brands"]).concat(
-          params["search"]["sizes"]).concat(
-          params["search"]["shapes"]).flatten.reject(&:blank?)
-        @beads = Bead.all.global_search("#{@filter}")
+
+        temp = Bead.all
+        @colorfilter = params[:search][:colors].reject(&:blank?)
+        if @colorfilter.any?
+          temp = temp.category_search("#{@colorfilter}")
+        end
+
+        @brandfilter = params[:search][:brands].reject(&:blank?)
+        if @brandfilter.any?
+          temp = temp.category_search("#{@brandfilter}")
+        end
+
+        @sizefilter = params[:search"][:sizes].reject(&:blank?)
+        if @sizefilter.any?
+          temp = temp.category_search("#{@sizefilter}")
+        end
+
+        @shapefilter = params[:search][:shapes].reject(&:blank?)
+        if @shapefilter.any?
+          temp = temp.category_search("#{@shapefilter}")
+        end
+
+        @beads = temp
       else
         @beads = Bead.all
       end

@@ -2,14 +2,15 @@ class Bead < ApplicationRecord
 
   include PgSearch::Model
 
-  pg_search_scope :global_search,
-    against: [:brand, :size, :shape],
-    associated_against: {
-      colors: [:name]
-    },
-    using: {
-      tsearch: {any_word: true}
-    }
+    pg_search_scope :category_search,
+      against: [:brand, :size, :shape],
+      associated_against: {
+        colors: [:name]
+      },
+      using: {
+        tsearch: {any_word: true}
+      }
+
   # all image related functionality taken from
   # https://medium.com/@anaharris/how-to-add-image-upload-functionality-to-your-rails-app-9f7fc3f3d042
   has_one_attached :photo
