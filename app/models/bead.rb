@@ -1,7 +1,8 @@
 class Bead < ApplicationRecord
 
   include PgSearch::Model
-
+    # search functionality adapted from
+    # https://medium.com/swlh/advanced-filtering-for-your-rails-5-application-28c8da2d29b6
     pg_search_scope :category_search,
       against: [:brand, :size, :shape],
       associated_against: {

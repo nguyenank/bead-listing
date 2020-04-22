@@ -16,9 +16,12 @@
  @import "bootstrap";
 
 $off-white: #f1f3f4;
+$gray: #bbb;
 $light-blue: #79bac1;
 $blue: #2a7886;
 $purple: #512b58;
+
+/*********** GENERAL SITEWIDE STYLE ***************/
 
 /* HEADER */
 .header {
@@ -58,57 +61,55 @@ $purple: #512b58;
   a:active {background-color: #ffffff;}
 }
 
-/* GENERAL */
+/* GENERAL BODY CONTENT*/
 body {
   background-color: $off-white;
   font-size: 100%;
   height: 100%;
-}
 
-.content {
-  margin: 0em 1em;
+  .content {
+    margin: 0em 1em;
 
-  h1 {
-    font-size: 2em;
-    font-weight: bold;
-    color: $blue;
+    h1 {
+      font-size: 2em;
+      font-weight: bold;
+      color: $blue;
+      font-variant-caps: small-caps;
+    }
+  }
+
+  .button {
+    background-color: $purple;
+    color:$off-white;
   }
 }
-
-.button {
-  background-color: $purple;
-  color:$off-white;
-}
-
-/* NEW BEAD */
-.form-control {
-  margin: 0.5em;
-}
-
 
 /* FOOTER */
 
 .footer {
-  border-top: 0.1em solid #bbb;
+  border-top: 0.1em solid $gray;
   padding: 0.25em 0.5em 0;
 
   .footer-text {
     font-size:0.7em;
   }
+  .github-link {
+    margin-bottom: 0.5em;
+  }
 }
 
-/* BEADS */
+/************* NEW/EDIT BEAD PAGE ***********/
+
+.form-control {
+  margin: 0.5em;
+}
+
+/********* BEAD CONTENT RELATED FORMATTING *****/
 
 .bead {
-  position: relative;
   /* IN GENERAL */
-
-  #add-bead {
-    color: $light-blue;
-    font-size: 2em;
-    line-height: 2em;
-    text-align:center;
-  }
+  position: relative;
+  overflow: auto;
 
   .bead-link {
     color: $light-blue;
@@ -117,7 +118,8 @@ body {
   }
 
   .bead-links {
-    position: absolute;
+    float: right;
+    white-space: nowrap;
     right: 0.5em;
     bottom: 0.5em;
     .link-divider {
@@ -155,16 +157,28 @@ body {
     display: block;
   }
 
+  #add-bead {
+    color: $light-blue;
+    font-size: 2em;
+    line-height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   /*FOR DETAIL DESCRIPTION DISPLAY*/
 
   p.description {
-    overflow:auto;
+    overflow: auto;
     white-space: normal;
   }
 }
 
 /* BEAD INDEX */
 .bead-list {
+  flex: 2;
   display: flex;
   justify-content: space-around;
   align-content: space-around;
@@ -172,7 +186,6 @@ body {
   margin: 2em;
 
   .bead-placeholder {
-    padding: 1em;
     margin: 0.5em;
     flex: 1 0 23%;
   }
@@ -198,20 +211,10 @@ body {
   margin-bottom: 1em;
 }
 
-.bead-photo-placeholder {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-  height: 40%;
-  max-width: 500px;
-  max-height: 500px;
-  margin-bottom: 1em;
-}
 
 /* FORM */
 .form-label {
-  color: $purple;
+  color: $light-blue;
   font-weight: bold;
   margin-left: 0.5em;
 }
@@ -236,6 +239,13 @@ body {
 }
 
 /* SEARCH BAR */
+
+#search-explain {
+  display: inline;
+  font-size: 0.6em;
+  vertical-align: super;
+  color: $gray;
+}
 .checkbox {
   display:block;
 }
@@ -243,6 +253,18 @@ body {
   margin-right: 0.5em;
 }
 
-.github-link {
-  margin-bottom: 0.5em;
+/* INDEX PAGE */
+.index {
+  display: flex;
+}
+
+.bead-search {
+  background-color: #fff;
+  padding: 1em;
+  overflow: scroll;
+
+  .button {
+    margin: auto;
+    display: block;
+  }
 }

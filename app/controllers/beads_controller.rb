@@ -52,7 +52,7 @@ class BeadsController < ApplicationController
           temp = temp.category_search("#{@brandfilter}")
         end
 
-        @sizefilter = params[:search"][:sizes].reject(&:blank?)
+        @sizefilter = params[:search][:sizes].reject(&:blank?)
         if @sizefilter.any?
           temp = temp.category_search("#{@sizefilter}")
         end
