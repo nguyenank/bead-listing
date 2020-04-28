@@ -30,7 +30,7 @@
   </div>
 
   <div class = "bead-list">
-    
+
     <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content"></div>
@@ -39,10 +39,7 @@
 
 
     <%= render 'beads', beads: @beads %>
-    <div class = "bead">
-      <a id = "add-bead" href="/beads/new">
-      <p>Add</p><p>New</p><p>Beads</p></a>
-    </div>
+    <%= render 'addbead' %>
     <div class = "bead-placeholder"></div>
     <div class = "bead-placeholder"></div>
     <div class = "bead-placeholder"></div>

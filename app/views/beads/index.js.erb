@@ -2,6 +2,7 @@
 function replaceBeads (innerHTML) {
   const beads = document.getElementsByClassName('bead-list')[0];
   let temp = innerHTML;
+  temp += "<%= j render 'addbead' %>";
   for (let i = 0; i <3 ; i ++) {
       temp += "<div class = 'bead-placeholder'></div>";
   }
@@ -9,8 +10,8 @@ function replaceBeads (innerHTML) {
 }
 
 if ('<%= @filter %>' === "[]") {
-replaceBeads("<%= j render 'beads', beads: Bead.all %><div class = 'bead'><%=j link_to('Add New Bead', new_bead_path, id: 'add-bead' ) %></div>");
+replaceBeads("<%= j render 'beads', beads: Bead.all %>");
 }
 else {
-replaceBeads("<%= j render 'beads', beads: @beads %><div class = 'bead'><%=j link_to('Add New Bead', new_bead_path, id: 'add-bead' ) %></div>");
+replaceBeads("<%= j render 'beads', beads: @beads %>");
 }
