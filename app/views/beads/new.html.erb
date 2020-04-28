@@ -19,7 +19,7 @@
 <h1><%= yield :newedit %> </h1>
   <div class="d-flex align-content-center new-bead">
     <%= form_for @bead do |f| %>
-    <%= render 'shared/error_messages' %>
+    <%= render 'shared/error_messages', source: @bead %>
 
     <%= f.label :photo, class: "form-label" %>
     <%= f.file_field :photo, class: "form-control"%>
@@ -44,3 +44,4 @@
     <%= f.text_area :description, size:"60x8", class:"form-control" %>
     <%= f.submit @newedit, class: "button form-control" %>
     <% end %>
+  </div>

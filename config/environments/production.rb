@@ -1,3 +1,6 @@
+## HOW TO CONFIGURE EMAIL:
+## https://dev.to/morinoko/sending-emails-in-rails-with-action-mailer-and-gmail-35g4
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 

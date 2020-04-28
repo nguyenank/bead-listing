@@ -22,9 +22,13 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
+# facilitate search feature
 gem 'simple_form'
 gem 'pg_search'
 gem 'acts-as-taggable-on', '~> 6.0'
+
+# facilitate contact format
+gem 'mail_form'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
