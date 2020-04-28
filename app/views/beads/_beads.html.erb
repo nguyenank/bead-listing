@@ -1,5 +1,7 @@
 <%# render list of beads on the index %>
 
 <% beads.each do |bead| %>
-  <%= render 'bead', bead: bead, description: false %>
+  <%= link_to bead_path(bead.id) do %>
+    <%= render 'bead', bead: bead, descriptionInclude: false %>
+  <% end %>
 <% end %>

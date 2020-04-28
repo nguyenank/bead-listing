@@ -20,6 +20,7 @@ Also, the _first_ time the project is deployed, a database must be created and s
 docker-compose run web rake db:create
 docker-compose run web rake db:migrate
 ```
+Run the commands with a slight delay between them (no more than a few seconds), to allow the database to be properly created before it attempts to be set-up.
 
 The website will be hosted at [http://localhost:3900](http://localhost:3900).
 
