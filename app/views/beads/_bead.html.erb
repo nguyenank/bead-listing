@@ -3,8 +3,6 @@
 <div class = "bead" id = bead.id>
   <% if(bead.photo.attached?) %>
     <%= image_tag(bead.photo, class:"bead-photo") %>
-  <% elsif (!descriptionInclude) %>
-    <%#= image_tag("default.png", class:"bead-photo-placeholder") %>
   <% end %>
   <p> <span class = "underline">Brand:</span><span> </span>
       <%= bead.brand %> </p>

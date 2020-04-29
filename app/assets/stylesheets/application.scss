@@ -183,6 +183,7 @@ body {
     line-height: 100%;
     justify-content: center;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -194,6 +195,10 @@ body {
     overflow: auto;
     white-space: normal;
   }
+}
+
+#add-bead-tile {
+  display: flex;
 }
 
 /* BEAD INDEX */
@@ -226,8 +231,8 @@ body {
   margin-right: auto;
   width: 80%;
   height: 80%;
-  max-width: 500px;
-  max-height: 500px;
+  max-width: 350px;
+  max-height: 350px;
   margin-bottom: 1em;
 }
 
@@ -284,12 +289,14 @@ a#search-explain:hover {
 }
 
 .bead-search {
-  background-color: #fff;
-  padding: 1em;
   overflow: scroll;
 
-  .button {
-    margin: auto;
-    display: block;
+  .search {
+    background-color: #fff;
+    padding: 2em;
   }
+    .button {
+      margin: auto;
+      display: block;
+    }
 }

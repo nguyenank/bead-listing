@@ -3,9 +3,6 @@
 <div class = "index">
 
   <div class = "bead-search">
-  <h1>Search
-    <%= link_to '?', "/how-search-works", {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', id: 'search-explain'} %>
-  </h1>
 
   <% @colors = Bead.color_counts.pluck(:name).uniq.sort_by!{|e| e.downcase}%>
   <% @brands = Bead.pluck(:brand).uniq.sort_by!{|e| e.downcase}%>
@@ -13,6 +10,9 @@
   <% @shapes = Bead.pluck(:shape).uniq.sort_by!{|e| e.downcase}%>
   <%= simple_form_for :search, required: false, url: root_path, method: "GET", remote: true do |f| %>
 
+  <h1>Search
+    <%= link_to '?', "/how-search-works", {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', id: 'search-explain'} %>
+  </h1>
     <div class="form-label" >Colors</div>
     <%= f.input :colors, label: false,  collection: @colors, as: :check_boxes %>
 
