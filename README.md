@@ -1,5 +1,9 @@
 # Summary
-This is a website that allows users to keep track of beads they own. The brand, color, shape, size can be specified, and beads can be sorted based on these parameters. A description and image can also be attached to each bead.
+
+![screenshot of homepage of bead listing website](readme-assets/screenshot.png)
+(placeholder images from [Generative Placeholders](https://generative-placeholders.glitch.me/))
+
+__Bead Listing__ is a website that allows users to keep track of beads they own. The brand, color, shape, size can be specified, and beads can be sorted based on these parameters. A description and image can also be attached to each bead.
 
 This application was initially created during CS189: Programming Practicum (Spring 2020) at Harvey Mudd College.
 
