@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
-gem "puma", ">= 3.12.3"
+gem "puma", ">= 4.3.5"
 # Use SCSS for stylesheets
 gem 'sassc', '~> 2'
 # Use Bootstrap formatting
@@ -29,6 +29,9 @@ gem 'acts-as-taggable-on', '~> 6.0'
 
 # facilitate contact format
 gem 'mail_form'
+
+# facilitate image upload
+gem "activestorage", ">= 5.2.4.3"
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
