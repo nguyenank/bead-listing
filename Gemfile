@@ -22,6 +22,9 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
+gem "actionpack", ">= 5.2.4.3"
+gem "activesupport", ">= 5.2.4.3"
+
 # facilitate search feature
 gem 'simple_form'
 gem 'pg_search'
