@@ -24,6 +24,7 @@ gem 'uglifier', '>= 1.3.0'
 
 gem "actionpack", ">= 5.2.4.3"
 gem "activesupport", ">= 5.2.4.3"
+gem "websocket-extensions", ">= 0.1.5"
 
 # facilitate search feature
 gem 'simple_form'
